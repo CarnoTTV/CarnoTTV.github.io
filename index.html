@@ -3,67 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CarnoTTV</title>
+<title>CarnoTTV | The Isle Evrima</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
-background:#050505;
-color:white;
+background:#0b0b0b;
+color:#fff;
 overflow-x:hidden;
 }
 
-/* BACKGROUND */
+/* HERO */
 
-body::before{
-content:'';
-position:fixed;
-inset:0;
-background:url('background.png') center center/cover no-repeat;
-z-index:-2;
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+url('background.png');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px;
 }
 
-body::after{
-content:'';
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.45);
-z-index:-1;
+.hero-content{
+max-width:900px;
 }
 
-/* NAVBAR */
+.hero h1{
+font-size:clamp(3rem,8vw,7rem);
+font-weight:800;
+}
+
+.hero h1 span{
+color:#ff2d55;
+}
+
+.hero p{
+margin:25px auto;
+max-width:700px;
+line-height:1.8;
+font-size:1.1rem;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+padding:16px 34px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+margin:10px;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+.btn-red{
+background:#ff2d55;
+color:#fff;
+box-shadow:0 0 20px rgba(255,45,85,.5);
+}
+
+.btn-dark{
+border:1px solid rgba(255,255,255,.2);
+color:#fff;
+}
+
+/* NAV */
 
 nav{
 position:fixed;
-top:20px;
+top:15px;
 left:50%;
 transform:translateX(-50%);
 width:90%;
 max-width:1400px;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
-padding:18px 35px;
-
+padding:18px 30px;
 background:rgba(0,0,0,.45);
-backdrop-filter:blur(15px);
-
-border-radius:18px;
-border:1px solid rgba(255,255,255,.08);
-
-z-index:1000;
+backdrop-filter:blur(16px);
+border-radius:20px;
+z-index:999;
 }
 
 .logo{
@@ -75,219 +116,136 @@ font-weight:800;
 color:#ff2d55;
 }
 
-/* LINKS */
-
 .menu{
 display:flex;
-gap:30px;
+gap:25px;
 }
 
 .menu a{
-text-decoration:none;
 color:white;
+text-decoration:none;
 font-weight:600;
 transition:.3s;
 }
 
 .menu a:hover{
 color:#ff2d55;
-text-shadow:0 0 12px #ff2d55;
 }
 
-/* BUTTONS */
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-
-padding:16px 34px;
-border-radius:15px;
-
-font-weight:700;
-text-decoration:none;
-
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-4px) scale(1.05);
-}
-
-.btn-red{
-background:#ff2d55;
-box-shadow:0 0 20px rgba(255,45,85,.55);
-color:white;
-}
-
-.btn-dark{
-border:1px solid rgba(255,255,255,.15);
-background:rgba(255,255,255,.04);
-color:white;
-}
-
-/* HERO */
-
-.hero{
-min-height:100vh;
+.socials{
 display:flex;
-align-items:center;
-padding:140px 8% 60px;
+gap:10px;
 }
 
-.hero-left{
-max-width:700px;
+/* SECTIONS */
+
+section{
+padding:100px 8%;
 }
 
-.hero h2{
-font-size:3rem;
-font-weight:600;
+.section-title{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:50px;
 }
 
-.hero h1{
-font-size:7rem;
-line-height:1;
-font-weight:800;
-margin-bottom:20px;
-}
-
-.hero h1 span{
+.section-title span{
 color:#ff2d55;
-}
-
-.hero p{
-font-size:1.2rem;
-line-height:1.8;
-color:#ddd;
-margin-bottom:35px;
-}
-
-/* GLASS PANELS */
-
-.panel{
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(14px);
-
-border-radius:22px;
-border:1px solid rgba(255,255,255,.08);
-
-padding:28px;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-
-width:90%;
-max-width:1400px;
-margin:auto;
 }
 
 /* CARDS */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,.03);
-
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
 border:1px solid rgba(255,255,255,.08);
-border-radius:16px;
-
-padding:22px;
-
-text-decoration:none;
-color:white;
-
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:
-0 0 25px rgba(255,45,85,.5);
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(255,45,85,.35);
 }
 
-/* FEATURED VIDEOS */
-
-.video-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-margin-top:25px;
-}
-
-.video{
-overflow:hidden;
-border-radius:16px;
-text-decoration:none;
-color:white;
-background:rgba(255,255,255,.03);
-transition:.3s;
-}
-
-.video:hover{
-transform:scale(1.03);
-box-shadow:0 0 25px rgba(255,45,85,.5);
-}
-
-.video img{
-width:100%;
-display:block;
+.card h3{
+color:#ff2d55;
+margin-bottom:15px;
 }
 
 /* STATS */
 
 .stats{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-
-width:90%;
-max-width:1400px;
-margin:30px auto;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .stat{
+background:rgba(255,255,255,.04);
+padding:35px;
+border-radius:20px;
 text-align:center;
-padding:30px;
+transition:.3s;
+}
+
+.stat:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(255,45,85,.4);
+}
+
+.stat h2{
+font-size:2.5rem;
+color:#ff2d55;
 }
 
 /* COMMUNITY */
 
 .community{
-width:90%;
-max-width:1400px;
-margin:auto;
-}
-
-.community-box{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:30px;
+background:linear-gradient(
+135deg,
+rgba(255,45,85,.18),
+rgba(255,45,85,.05)
+);
+padding:60px;
+border-radius:25px;
+text-align:center;
 }
 
 /* FOOTER */
 
 footer{
-padding:30px;
+padding:40px;
 text-align:center;
-margin-top:50px;
+border-top:1px solid rgba(255,255,255,.08);
+color:#999;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.menu{
+display:none;
+}
+
+.hero{
+padding-top:160px;
+}
+
 }
 
 </style>
 </head>
-<body>
 
-<!-- NAV -->
+<body>
 
 <nav>
 
@@ -296,59 +254,174 @@ Carno<span>TTV</span>
 </div>
 
 <div class="menu">
-<a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#content">Content</a>
 <a href="#stats">Stats</a>
-<a href="#contact">Contact</a>
+<a href="#community">Community</a>
 </div>
 
-<div class="menu">
-<a href="https://youtube.com/@CarnoTTV8" target="_blank">YouTube</a>
-<a href="https://discord.gg/carnottv" target="_blank">Discord</a>
+<div class="socials">
+<a class="btn btn-dark"
+href="https://www.youtube.com/@CarnoTTV8"
+target="_blank">
+YouTube
+</a>
+
+<a class="btn btn-red"
+href="https://discord.gg/carnottv"
+target="_blank">
+Discord
+</a>
 </div>
 
 </nav>
 
-<!-- HERO -->
+<section class="hero">
 
-<section class="hero" id="home">
+<div class="hero-content">
 
-<div class="hero-left">
-
-<h2>Welcome to</h2>
-
-<h1>
-Carno<span>TTV</span>
-</h1>
+<h1>Carno<span>TTV</span></h1>
 
 <p>
 The Isle Evrima gameplay, Carnotaurus hunts,
 PvP battles, survival guides and livestream adventures.
+Join the community and survive the island.
 </p>
 
-<a class="btn btn-red"
-href="https://youtube.com/@CarnoTTV8"
-target="_blank">
+<a href="https://www.youtube.com/@CarnoTTV8"
+target="_blank"
+class="btn btn-red">
 Subscribe Now
 </a>
 
-<a class="btn btn-dark"
-href="#about">
-Learn More
+<a href="https://discord.gg/carnottv"
+target="_blank"
+class="btn btn-dark">
+Join Discord
 </a>
 
 </div>
 
 </section>
 
-<!-- ABOUT + FEATURED -->
-<!-- Gaming / Tutorials / Live Streams -->
-<!-- Featured videos -->
+<section id="about">
 
-<!-- STATS -->
-<!-- COMMUNITY -->
-<!-- FOOTER -->
+<h2 class="section-title">
+About <span>The Channel</span>
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎮 Gaming</h3>
+<p>Gameplay highlights, PvP battles and survival moments.</p>
+</div>
+
+<div class="card">
+<h3>📖 Tutorials</h3>
+<p>Guides, tips and strategies for The Isle Evrima.</p>
+</div>
+
+<div class="card">
+<h3>🔴 Live Streams</h3>
+<p>Watch community events and live hunts.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="content">
+
+<h2 class="section-title">
+Featured <span>Content</span>
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Epic Carno Adventure</h3>
+<p>Follow the hunt and dominate the island.</p>
+</div>
+
+<div class="card">
+<h3>Survival Guide</h3>
+<p>Learn advanced Evrima survival techniques.</p>
+</div>
+
+<div class="card">
+<h3>Live Stream Highlights</h3>
+<p>The best moments from recent streams.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="stats">
+
+<h2 class="section-title">
+Channel <span>Growth</span>
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>100K+</h2>
+<p>Subscribers</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>Videos</p>
+</div>
+
+<div class="stat">
+<h2>10M+</h2>
+<p>Views</p>
+</div>
+
+<div class="stat">
+<h2>2024</h2>
+<p>Since</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<div class="community">
+
+<h2 class="section-title">
+Join The <span>CarnoTTV Community</span>
+</h2>
+
+<p style="margin-bottom:25px;">
+Subscribe on YouTube and join Discord for new videos,
+live streams and community events.
+</p>
+
+<a href="https://www.youtube.com/@CarnoTTV8"
+target="_blank"
+class="btn btn-red">
+Subscribe
+</a>
+
+<a href="https://discord.gg/carnottv"
+target="_blank"
+class="btn btn-dark">
+Join Discord
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© CarnoTTV • The Isle Evrima Content Creator
+</footer>
 
 </body>
 </html>
