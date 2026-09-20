@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -21,16 +20,14 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#070707;
-color:white;
+background:#0b0b0b;
+color:#fff;
 }
-
-/* HERO */
 
 .hero{
 min-height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.85)),
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.80)),
 url('background.png');
 background-size:cover;
 background-position:center;
@@ -38,17 +35,10 @@ background-repeat:no-repeat;
 }
 
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(12px);
-z-index:1000;
+padding:25px 8%;
 }
 
 .logo{
@@ -69,7 +59,6 @@ gap:30px;
 color:white;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
 }
 
 .menu a:hover{
@@ -77,22 +66,19 @@ color:#ff2d55;
 }
 
 .hero-content{
-min-height:100vh;
-display:flex;
-align-items:center;
-padding:0 8%;
-max-width:800px;
+max-width:700px;
+padding:120px 8%;
 }
 
 .hero-content h2{
 font-size:2rem;
-color:#ddd;
+font-weight:400;
 }
 
 .hero-content h1{
 font-size:5rem;
 line-height:1;
-margin:15px 0;
+margin-bottom:20px;
 }
 
 .hero-content h1 span{
@@ -102,7 +88,7 @@ color:#ff2d55;
 .hero-content p{
 font-size:1.1rem;
 color:#ddd;
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
 .buttons{
@@ -112,30 +98,24 @@ flex-wrap:wrap;
 }
 
 .btn{
+display:inline-block;
 padding:15px 30px;
-text-decoration:none;
 border-radius:12px;
+text-decoration:none;
 font-weight:700;
-transition:.3s;
 }
 
-.btn-red{
+.btn-primary{
 background:#ff2d55;
 color:white;
 }
 
-.btn-red:hover{
-transform:translateY(-3px);
-}
-
-.btn-dark{
+.btn-secondary{
 border:2px solid rgba(255,255,255,.25);
 color:white;
 }
 
-/* SECTIONS */
-
-section{
+.section{
 padding:100px 8%;
 }
 
@@ -149,7 +129,6 @@ margin-bottom:50px;
 max-width:1000px;
 margin:auto;
 text-align:center;
-font-size:1.1rem;
 line-height:1.9;
 color:#ddd;
 }
@@ -161,23 +140,16 @@ gap:25px;
 }
 
 .card{
-background:#111;
+background:#141414;
 padding:30px;
 border-radius:18px;
 border:1px solid #222;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
 }
 
 .card h3{
 color:#ff2d55;
-margin-bottom:12px;
+margin-bottom:10px;
 }
-
-/* STATS */
 
 .stats{
 display:grid;
@@ -186,21 +158,19 @@ gap:25px;
 }
 
 .stat{
-background:#111;
+background:#141414;
 padding:30px;
 border-radius:18px;
 text-align:center;
 }
 
-.stat h2{
-font-size:3rem;
+.stat h3{
+font-size:2rem;
 color:#ff2d55;
 }
 
-/* CONTACT */
-
 .contact-box{
-background:#111;
+background:#141414;
 padding:50px;
 border-radius:20px;
 max-width:900px;
@@ -215,41 +185,34 @@ color:#ff2d55;
 margin:20px 0;
 }
 
-/* FOOTER */
-
 footer{
-padding:30px;
 text-align:center;
+padding:30px;
 border-top:1px solid #222;
 color:#888;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
+
+.menu{
+gap:15px;
+font-size:.85rem;
+}
 
 .hero-content h1{
 font-size:3rem;
 }
 
 .hero-content h2{
-font-size:1.3rem;
-}
-
-.menu{
-gap:15px;
-font-size:.85rem;
+font-size:1.4rem;
 }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HOME -->
-
-<div class="hero" id="home">
+<section class="hero" id="home">
 
 <nav>
 
@@ -269,8 +232,6 @@ Carno<span>TTV</span>
 
 <div class="hero-content">
 
-<div>
-
 <h2>Welcome To</h2>
 
 <h1>Carno<span>TTV</span></h1>
@@ -278,19 +239,15 @@ Carno<span>TTV</span>
 <p>
 The Isle Evrima gameplay, Carnotaurus hunts, PvP battles,
 survival guides, community events and the latest Evrima updates.
-Join the journey and become part of the pack.
 </p>
 
 <div class="buttons">
 
-<a href="https://www.youtube.com/"
-target="_blank"
-class="btn btn-red">
+<a href="https://www.youtube.com/" target="_blank" class="btn btn-primary">
 Subscribe On YouTube
 </a>
 
-<a href="#about"
-class="btn btn-dark">
+<a href="#about" class="btn btn-secondary">
 Learn More
 </a>
 
@@ -298,66 +255,56 @@ Learn More
 
 </div>
 
-</div>
+</section>
 
-</div>
+<section id="about" class="section">
 
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2 class="section-title">
-About CarnoTTV
-</h2>
+<h2 class="section-title">About CarnoTTV</h2>
 
 <div class="about-box">
 
 <p>
-CarnoTTV is dedicated to The Isle Evrima and focuses on delivering
-high-quality gameplay, intense Carnotaurus hunts, survival adventures,
-PvP encounters, and community-driven experiences.
+CarnoTTV is dedicated to The Isle Evrima, focusing on Carnotaurus gameplay,
+survival strategies, intense PvP encounters and community adventures.
+The channel showcases the excitement of surviving in Evrima's evolving ecosystem.
 </p>
 
 <br>
 
 <p>
-Whether you're a veteran player or new to Evrima, you'll find useful
-guides, exciting battles, growth strategies, and the latest information
-about updates and gameplay mechanics.
+Whether you're a veteran player or just starting your journey,
+you'll find guides, gameplay highlights and useful information
+to improve your survival skills.
 </p>
 
 </div>
 
 </section>
 
-<!-- CONTENT -->
+<section id="content" class="section">
 
-<section id="content">
-
-<h2 class="section-title">
-Featured Content
-</h2>
+<h2 class="section-title">Featured Content</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Carnotaurus Hunts</h3>
 <p>
-Watch thrilling chases, pack coordination and intense predator gameplay.
+Fast-paced hunts, ambush tactics and intense predator gameplay.
 </p>
 </div>
 
 <div class="card">
 <h3>Survival Guides</h3>
 <p>
-Learn how to survive, grow faster and master Evrima's ecosystem.
+Growth routes, food sources, combat techniques and survival tips.
 </p>
 </div>
 
 <div class="card">
 <h3>Evrima Updates</h3>
 <p>
-Stay informed about new dinosaurs, mechanics and future development.
+Coverage of new creatures, mechanics, balancing changes and future features.
 </p>
 </div>
 
@@ -365,58 +312,49 @@ Stay informed about new dinosaurs, mechanics and future development.
 
 </section>
 
-<!-- STATS -->
+<section id="stats" class="section">
 
-<section id="stats">
-
-<h2 class="section-title">
-Channel Highlights
-</h2>
+<h2 class="section-title">Channel Highlights</h2>
 
 <div class="stats">
 
 <div class="stat">
-<h2>100%</h2>
-<p>Evrima Focused</p>
+<h3>100%</h3>
+<p>The Isle Evrima Focused</p>
 </div>
 
 <div class="stat">
-<h2>24/7</h2>
-<p>Community Growth</p>
+<h3>Community</h3>
+<p>Driven By Players & Viewers</p>
 </div>
 
 <div class="stat">
-<h2>∞</h2>
-<p>Future Adventures</p>
+<h3>Future</h3>
+<p>Growing With Every Evrima Update</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2 class="section-title">
-Contact
-</h2>
+<section id="contact" class="section">
 
 <div class="contact-box">
 
-<h3>Business Inquiries & Collaborations</h3>
+<h2>Contact</h2>
+
+<br>
 
 <p>
-For sponsorships, collaborations, community events,
-or business opportunities, feel free to reach out.
+For collaborations, sponsorships, community events
+or business inquiries:
 </p>
 
 <div class="email">
 CarnoTTV883@gmail.com
 </div>
 
-<a href="mailto:CarnoTTV883@gmail.com"
-class="btn btn-red">
+<a href="mailto:CarnoTTV883@gmail.com" class="btn btn-primary">
 Send Email
 </a>
 
