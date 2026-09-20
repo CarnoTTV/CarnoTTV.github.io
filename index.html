@@ -1,1 +1,468 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><title>CarnoTTV</title></head><body><h1>CarnoTTV Final Template</h1><p>Replace your current index.html with the full version from chat if desired.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarnoTTV | The Isle Evrima</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0b0b;
+color:white;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+url('background.png');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+position:relative;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+}
+
+.logo{
+font-size:2rem;
+font-weight:800;
+}
+
+.logo span{
+color:#ff2d55;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#ff2d55;
+}
+
+/* SOCIALS */
+
+.socials{
+display:flex;
+gap:10px;
+}
+
+.socials a{
+text-decoration:none;
+background:rgba(255,255,255,.1);
+padding:10px 15px;
+border-radius:10px;
+color:white;
+}
+
+/* WELCOME PANEL */
+
+.hero-box{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:min(850px,90%);
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+}
+
+.close{
+position:absolute;
+top:15px;
+right:20px;
+font-size:28px;
+cursor:pointer;
+}
+
+.hero-box h2{
+font-size:1.4rem;
+font-weight:400;
+}
+
+.hero-box h1{
+font-size:clamp(3rem,8vw,6rem);
+font-weight:800;
+margin-bottom:10px;
+}
+
+.hero-box h1 span{
+color:#ff2d55;
+}
+
+.hero-box p{
+color:#ddd;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+margin:5px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.btn-red{
+background:#ff2d55;
+color:white;
+}
+
+.btn-dark{
+border:2px solid rgba(255,255,255,.25);
+color:white;
+}
+
+/* SECTIONS */
+
+.section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:50px;
+}
+
+.section-title span{
+color:#ff2d55;
+}
+
+/* ABOUT */
+
+.about{
+max-width:1000px;
+margin:auto;
+text-align:center;
+line-height:1.8;
+color:#ddd;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#141414;
+border:1px solid #222;
+padding:30px;
+border-radius:20px;
+text-decoration:none;
+color:white;
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 25px rgba(255,45,85,.4);
+}
+
+.card h3{
+color:#ff2d55;
+margin-bottom:10px;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat{
+background:#141414;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat h3{
+font-size:2rem;
+color:#ff2d55;
+}
+
+/* CONTACT */
+
+.contact-box{
+background:#141414;
+padding:50px;
+border-radius:20px;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.email{
+font-size:1.3rem;
+font-weight:700;
+color:#ff2d55;
+margin:20px 0;
+}
+
+footer{
+padding:30px;
+text-align:center;
+border-top:1px solid #222;
+color:#888;
+}
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.hero-box{
+padding:25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero" id="home">
+
+<nav>
+
+<div class="logo">
+Carno<span>TTV</span>
+</div>
+
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#content">Content</a>
+<a href="#stats">Stats</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="socials">
+<a href="https://www.youtube.com/@CarnoTTV8" target="_blank">YouTube</a>
+<a href="https://discord.gg/carnottv" target="_blank">Discord</a>
+</div>
+
+</nav>
+
+<div class="hero-box" id="heroBox">
+
+<div class="close" onclick="document.getElementById('heroBox').style.display='none'">
+✕
+</div>
+
+<h2>Welcome To</h2>
+
+<h1>Carno<span>TTV</span></h1>
+
+<p>
+The Isle Evrima gameplay, Carnotaurus hunts, PvP battles,
+survival guides, livestreams and community adventures.
+</p>
+
+<a href="https://www.youtube.com/@CarnoTTV8"
+target="_blank"
+class="btn btn-red">
+Subscribe
+</a>
+
+<a href="#about"
+class="btn btn-dark">
+Learn More
+</a>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<h2 class="section-title">
+About <span>CarnoTTV</span>
+</h2>
+
+<div class="about">
+
+<p>
+CarnoTTV is dedicated to The Isle Evrima, featuring intense Carnotaurus gameplay,
+survival stories, PvP encounters, pack hunting tactics and educational guides
+for players looking to dominate the island.
+</p>
+
+</div>
+
+</section>
+
+<section id="content" class="section">
+
+<h2 class="section-title">
+Featured <span>Content</span>
+</h2>
+
+<div class="cards">
+
+<a class="card"
+href="https://www.youtube.com/@CarnoTTV8/videos"
+target="_blank">
+
+<h3>Epic Carno Adventures</h3>
+
+<p>
+Watch exciting hunts, survival moments and unforgettable encounters.
+</p>
+
+</a>
+
+<a class="card"
+href="https://www.youtube.com/@CarnoTTV8/videos"
+target="_blank">
+
+<h3>Survival Guides</h3>
+
+<p>
+Learn routes, combat tactics and strategies for surviving longer.
+</p>
+
+</a>
+
+<a class="card"
+href="https://www.youtube.com/@CarnoTTV8/videos"
+target="_blank">
+
+<h3>Live Stream Highlights</h3>
+
+<p>
+Catch the best moments from community streams and events.
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section id="stats" class="section">
+
+<h2 class="section-title">
+Channel <span>Highlights</span>
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>100%</h3>
+<p>The Isle Evrima Focused</p>
+</div>
+
+<div class="stat">
+<h3>Community</h3>
+<p>Driven By Players</p>
+</div>
+
+<div class="stat">
+<h3>Future</h3>
+<p>Growing Every Day</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="section">
+
+<div class="contact-box">
+
+<h2 class="section-title">
+Contact
+</h2>
+
+<p>
+Business inquiries, sponsorships and collaborations:
+</p>
+
+<div class="email">
+CarnoTTV883@gmail.com
+</div>
+
+<a href="mailto:CarnoTTV883@gmail.com"
+class="btn btn-red">
+Send Email
+</a>
+
+<br><br>
+
+<a href="https://discord.gg/carnottv"
+target="_blank"
+class="btn btn-dark">
+CarnoTTV Discord
+</a>
+
+<a href="https://www.youtube.com/@CarnoTTV8"
+target="_blank"
+class="btn btn-red">
+Subscribe Now
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 CarnoTTV • The Isle Evrima Content Creator
+</footer>
+
+</body>
+</html>
