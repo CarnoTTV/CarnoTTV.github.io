@@ -7,15 +7,84 @@
 <title>CarnoTTV</title>
 
 <style>
-body{
+*{
     margin:0;
-    height:100vh;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
     background:url('background.png') center center/cover no-repeat;
+    min-height:100vh;
+    color:white;
+}
+
+.overlay{
+    min-height:100vh;
+    background:rgba(0,0,0,0.45);
+}
+
+nav{
+    padding:25px 50px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.hero{
+    padding:120px 50px;
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    margin-top:20px;
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    background:#e11d48;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
 }
 </style>
-
 </head>
+
 <body>
+
+<div class="overlay">
+
+<nav>
+<div class="logo">CarnoTTV</div>
+</nav>
+
+<div class="hero">
+<h1>Welcome to CarnoTTV</h1>
+
+<p>
+Gaming content, livestreams, tutorials and entertainment.
+</p>
+
+<a class="btn" href="https://youtube.com/@YOURCHANNEL">
+Subscribe on YouTube
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
