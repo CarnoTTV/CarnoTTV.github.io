@@ -40,12 +40,12 @@ transition:.3s;
 }
 
 .hotspot:hover{
-background:rgba(255,45,85,.15);
+background:rgba(255,45,85,.08);
+border:2px solid rgba(255,45,85,.8);
 box-shadow:
-0 0 20px rgba(255,45,85,.9),
-0 0 40px rgba(255,45,85,.7),
-0 0 60px rgba(255,45,85,.4);
-transform:scale(1.04);
+0 0 15px rgba(255,45,85,.9),
+0 0 30px rgba(255,45,85,.6);
+transform:translateY(-3px) scale(1.03);
 }
 
 /* Top Navigation */
@@ -164,26 +164,60 @@ height:8%;
 
 /* Close button */
 
-.closebox{
+.hero-panel{
 position:absolute;
-top:16%;
-left:39%;
-width:40px;
-height:40px;
-border-radius:50%;
-background:rgba(255,45,85,.9);
-color:white;
-font-size:24px;
-font-weight:bold;
-display:flex;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-z-index:99;
+left:7%;
+top:22%;
+width:520px;
+padding:35px;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(14px);
+border-radius:25px;
+border:1px solid rgba(255,255,255,.12);
 }
 
-.closebox:hover{
-transform:scale(1.1);
+.hero-panel h3{
+font-size:1.4rem;
+font-weight:300;
+}
+
+.hero-panel h1{
+font-size:4.5rem;
+font-weight:800;
+margin:10px 0;
+}
+
+.hero-panel p{
+line-height:1.7;
+color:#ddd;
+margin-bottom:25px;
+}
+
+.btn-red,
+.btn-dark{
+display:inline-block;
+padding:14px 28px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+margin-right:10px;
+transition:.3s;
+}
+
+.btn-red{
+background:#ff2d55;
+color:white;
+}
+
+.btn-dark{
+border:1px solid rgba(255,255,255,.3);
+color:white;
+}
+
+.btn-red:hover,
+.btn-dark:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 20px rgba(255,45,85,.8);
 }
 </style>
 </head>
@@ -191,9 +225,31 @@ transform:scale(1.1);
 
 <div class="site">
 
-<img src="background.png" alt="CarnoTTV">
+<img src="background.png" alt="CarnoTTV"><div class="hero-panel">
 
-<div class="closebox" onclick="this.style.display='none'">×</div>
+<h3>Welcome To</h3>
+
+<h1>CarnoTTV</h1>
+
+<p>
+The Isle Evrima gameplay, Carnotaurus hunts,
+PvP battles, survival guides and livestream adventures.
+</p>
+
+<a href="https://www.youtube.com/@CarnoTTV8"
+target="_blank"
+class="btn-red">
+Subscribe On YouTube
+</a>
+
+<a href="#about"
+class="btn-dark">
+Learn More
+</a>
+
+</div>
+
+
 
 <a class="hotspot home" href="#"></a>
 <a class="hotspot about" href="#about"></a>
