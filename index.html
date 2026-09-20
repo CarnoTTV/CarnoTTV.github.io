@@ -1,12 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CarnoTTV</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -15,315 +12,119 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Poppins',sans-serif;
     background:#000;
-    color:#fff;
+    overflow-x:hidden;
 }
 
-.hero{
-    min-height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
-    url('background.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+.wrapper{
+    position:relative;
+    width:100%;
+    max-width:1536px;
+    margin:auto;
 }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 8%;
+.wrapper img{
+    width:100%;
+    display:block;
 }
 
-.logo{
-    font-size:2rem;
-    font-weight:800;
+/* TOP MENU */
+
+.hotspot{
+    position:absolute;
+    display:block;
 }
 
-.logo span{
-    color:#ff2d55;
+/* Home */
+.home{
+    top:1.2%;
+    left:39%;
+    width:4%;
+    height:2.5%;
 }
 
-.menu{
-    display:flex;
-    gap:30px;
+/* About */
+.about{
+    top:1.2%;
+    left:44%;
+    width:5%;
+    height:2.5%;
 }
 
-.menu a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
+/* Content */
+.content{
+    top:1.2%;
+    left:50%;
+    width:6%;
+    height:2.5%;
 }
 
-.menu a:hover{
-    color:#ff2d55;
-}
-
-.hero-content{
-    max-width:700px;
-    padding:120px 8%;
-}
-
-.hero-content h2{
-    font-size:2rem;
-    font-weight:400;
-}
-
-.hero-content h1{
-    font-size:5rem;
-    line-height:1;
-    margin-bottom:20px;
-}
-
-.hero-content h1 span{
-    color:#ff2d55;
-}
-
-.hero-content p{
-    font-size:1.1rem;
-    color:#ddd;
-    margin-bottom:35px;
-}
-
-.buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:15px 30px;
-    text-decoration:none;
-    border-radius:12px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:#ff2d55;
-    color:white;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-secondary{
-    border:2px solid rgba(255,255,255,.3);
-    color:white;
-}
-
-.section{
-    padding:90px 8%;
-    background:#0b0b0b;
-}
-
-.section h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2.5rem;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#151515;
-    padding:25px;
-    border-radius:16px;
-    border:1px solid #222;
-}
-
-.card h3{
-    color:#ff2d55;
-    margin-bottom:10px;
-}
-
+/* Stats */
 .stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+    top:1.2%;
+    left:56%;
+    width:4%;
+    height:2.5%;
 }
 
-.stat{
-    background:#151515;
-    padding:30px;
-    border-radius:16px;
-    text-align:center;
+/* Contact */
+.contact{
+    top:1.2%;
+    left:61%;
+    width:6%;
+    height:2.5%;
 }
 
-.stat h3{
-    color:#ff2d55;
-    font-size:2rem;
+/* YouTube button */
+.youtube{
+    top:34%;
+    left:19%;
+    width:15%;
+    height:4%;
 }
 
-.cta{
-    background:#151515;
-    border-radius:20px;
-    padding:50px;
-    text-align:center;
+/* Learn More button */
+.learn{
+    top:34%;
+    left:35%;
+    width:11%;
+    height:4%;
 }
 
-footer{
-    background:#050505;
-    text-align:center;
-    padding:30px;
-    color:#999;
-}
-
-@media(max-width:768px){
-
-.menu{
-    gap:15px;
-    font-size:.9rem;
-}
-
-.hero-content h1{
-    font-size:3rem;
-}
-
-.hero-content h2{
-    font-size:1.4rem;
-}
+/* Subscribe Now bottom card */
+.subscribe{
+    top:82%;
+    left:60%;
+    width:14%;
+    height:4%;
 }
 </style>
 </head>
-
 <body>
 
-<section class="hero" id="home">
+<div class="wrapper">
 
-<nav>
-<div class="logo">Carno<span>TTV</span></div>
+<img src="background.png" alt="CarnoTTV">
 
-<div class="menu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#content">Content</a>
-<a href="#stats">Stats</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
+<a class="hotspot home" href="#"></a>
+<a class="hotspot about" href="#about"></a>
+<a class="hotspot content" href="#content"></a>
+<a class="hotspot stats" href="#stats"></a>
+<a class="hotspot contact" href="#contact"></a>
 
-<div class="hero-content">
-<h2>Welcome to</h2>
+<a class="hotspot youtube"
+href="https://youtube.com/@YOURCHANNEL"
+target="_blank"></a>
 
-<h1>Carno<span>TTV</span></h1>
+<a class="hotspot learn"
+href="#about"></a>
 
-<p>
-Gaming content, livestreams, tutorials and entertainment.
-Join the community and stay updated with the latest content.
-</p>
-
-<div class="buttons">
-<a href="https://youtube.com/" class="btn btn-primary">
-Subscribe on YouTube
-</a>
-
-<a href="#about" class="btn btn-secondary">
-Learn More
-</a>
-</div>
-</div>
-
-</section>
-
-<section id="about" class="section">
-
-<h2>About The Channel</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Gaming</h3>
-<p>Gameplay, challenges, highlights and entertaining content.</p>
-</div>
-
-<div class="card">
-<h3>Tutorials</h3>
-<p>Helpful guides, walkthroughs and educational videos.</p>
-</div>
-
-<div class="card">
-<h3>Live Streams</h3>
-<p>Interactive livestreams and community events.</p>
-</div>
+<a class="hotspot subscribe"
+href="https://youtube.com/@YOURCHANNEL"
+target="_blank"></a>
 
 </div>
 
-</section>
-
-<section id="content" class="section">
-
-<h2>Featured Content</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Latest Upload</h3>
-<p>Add your newest YouTube video here.</p>
-</div>
-
-<div class="card">
-<h3>Popular Video</h3>
-<p>Showcase your most viewed content.</p>
-</div>
-
-<div class="card">
-<h3>Community</h3>
-<p>Keep your audience engaged and connected.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="stats" class="section">
-
-<h2>Channel Growth</h2>
-
-<div class="stats">
-
-<div class="stat">
-<h3>100+</h3>
-<p>Subscribers</p>
-</div>
-
-<div class="stat">
-<h3>50+</h3>
-<p>Videos</p>
-</div>
-
-<div class="stat">
-<h3>10K+</h3>
-<p>Views</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="section">
-
-<div class="cta">
-
-<h2>Join The CarnoTTV Community</h2>
-
-<p style="margin:20px 0;">
-Subscribe and stay updated with future content.
-</p>
-
-<a href="https://youtube.com/" class=
-```
+</body>
+</html>
