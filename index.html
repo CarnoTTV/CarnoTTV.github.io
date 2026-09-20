@@ -6,7 +6,13 @@
 <title>CarnoTTV</title>
 <style>
 body{margin:0;font-family:Arial,sans-serif;background:#050505;color:#fff}
-.hero{position:relative;height:100vh;background:url('background.png') center/cover no-repeat}
+.hero{
+    position:relative;
+    height:100vh;
+    background:url('background.png') center top no-repeat;
+    background-size: contain;
+    background-color:#000;
+}background:url('background.png') center/cover no-repeat}
 .overlay{position:absolute;inset:0;background:rgba(0,0,0,.25)}
 nav{position:absolute;top:20px;left:0;right:0;text-align:center;z-index:2}
 nav a{color:#fff;text-decoration:none;margin:0 18px;font-weight:bold}
